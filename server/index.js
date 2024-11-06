@@ -49,7 +49,7 @@ app.post('/api/login/slate', async (req, res) => {
     await page.waitForSelector('[type="password"]', { visible: true });
     
     await page.type('[type="password"]', password);
-    // await page.click('#passwordNext');
+    await page.click('#passwordNext');
     
     await page.waitForNavigation();
     
