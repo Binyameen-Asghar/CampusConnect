@@ -30,9 +30,12 @@ app.post('/api/login/slate', async (req, res) => {
     //     '--disable-blink-features=AutomationControlled'
     //   ]
     // });
-    executablePath: process.env.CHROME_PATH, // uses the system Chrome path
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
+  //   executablePath: process.env.CHROME_PATH, // uses the system Chrome path
+  //   args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  // });
+  executablePath: '/usr/bin/google-chrome', // double-check this path if necessary
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+});
     
     const page = await browser.newPage();
     await page.goto('https://slate.uol.edu.pk');
