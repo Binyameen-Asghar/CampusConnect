@@ -1,6 +1,6 @@
 export async function startAutomation(system: 'slate' | 'erp') {
   try {
-    const response = await fetch(`http://localhost:3000/api/login/${system}`, {
+    const response = await fetch(`https://campusconnect-u3ax.onrender.com/api/login/${system}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

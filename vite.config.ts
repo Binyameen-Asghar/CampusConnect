@@ -8,7 +8,7 @@ export default defineConfig({
     cors: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'https://campusconnect-u3ax.onrender.com',
         changeOrigin: true,
         secure: false
       }
