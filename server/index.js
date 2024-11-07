@@ -23,19 +23,13 @@ app.post('/api/login/slate', async (req, res) => {
   let browser;
   try {
     browser = await puppeteer.launch({
-    //   headless: false,
-    //   args: [
-    //     '--no-sandbox',
-    //     '--disable-setuid-sandbox',
-    //     '--disable-blink-features=AutomationControlled'
-    //   ]
-    // });
-  //   executablePath: process.env.CHROME_PATH, // uses the system Chrome path
-  //   args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  // });
-  // executablePath: '/usr/bin/google-chrome', // double-check this path if necessary
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
-});
+      headless: false,
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-blink-features=AutomationControlled'
+      ]
+    });
     
     const page = await browser.newPage();
     await page.goto('https://slate.uol.edu.pk');
